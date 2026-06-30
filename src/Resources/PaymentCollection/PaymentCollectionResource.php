@@ -2,8 +2,8 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\Payment\Resources\PaymentCollection;
 
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Schemas\Schema;
 use Filament\Tables\Table;
 use JeffersonGoncalves\Commerce\Payment\Models\PaymentCollection;
 use JeffersonGoncalves\FilamentCommerce\Payment\CommercePaymentPlugin;
@@ -26,9 +26,9 @@ class PaymentCollectionResource extends Resource
         }
     }
 
-    public static function form(Schema $schema): Schema
+    public static function form(Form $form): Form
     {
-        return PaymentCollectionForm::configure($schema);
+        return PaymentCollectionForm::configure($form);
     }
 
     public static function table(Table $table): Table
